@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+    <servlet>
+        <servlet-name>SystemServiceServlet</servlet-name>
+        <servlet-class>com.google.api.server.spi.SystemServiceServlet
+        </servlet-class>
+        <init-param>
+            <param-name>services</param-name>
+            <param-value>
+                com.ringencorp.ezrtt.backend.apis.EmpeeEndpoint,com.ringencorp.ezrtt.backend.apis.EmperEndpoint
+            </param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SystemServiceServlet</servlet-name>
+        <url-pattern>/_ah/spi/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WebClient</servlet-name>
+        <jsp-file>webclient.html</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ViewReport</servlet-name>
+        <jsp-file>ViewEmpReport.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewReport</servlet-name>
+        <url-pattern>/viewreport</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddEmployeeServlet</servlet-name>
+        <servlet-class>com.ringencorp.ezrtt.backend.apis.AddEmployeeServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddEmployeeServlet</servlet-name>
+        <url-pattern>/addemployee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegEmperServlet</servlet-name>
+        <servlet-class>com.ringencorp.ezrtt.backend.apis.RegEmperServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WebClient</servlet-name>
+        <url-pattern>/web</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

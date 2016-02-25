@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello Endpoints!</title>
+<script async src="/js/base.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap-responsive.css">
+<style>
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #f5f5f5;
+}
+
+blockquote {
+	margin-bottom: 10px;
+	border-left-color: #bbb;
+}
+
+form {
+	margin-top: 10px;
+}
+
+form label {
+	width: 90px;
+	display: inline-block;
+}
+
+.form-signin input[type="text"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+
+.row {
+	margin-left: 0px;
+	margin-top: 10px;
+	overflow: scroll;
+}
+</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="navbar-inner">
+						<h2 class="brand">Please register</h2>
+					</div>
+
+					<form action="return false" method="post">
+
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" required=""
+								placeholder="Name*">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" required=""
+								placeholder="Email*">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" name="phone"
+								placeholder="Phone">
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" name="message"
+								placeholder="Message" rows="7"></textarea>
+						</div>
+						<div class="mbr-buttons mbr-buttons--right">
+							<button type="submit"
+								class="mbr-buttons__btn btn btn-lg btn-danger">CONTACT
+								US</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#">Hello Endpoints!</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+
+		<output id="outputLog"></output>
+
+		<form onsubmit="return false;">
+			<h2>Get Greeting</h2>
+			<div>
+				<label for="id">Greeting ID:</label><input id="id" />
+			</div>
+			<div>
+				<input id="getGreeting" type="submit" class="btn btn-small"
+					value="Submit">
+			</div>
+		</form>
+
+		<form onsubmit="return false;">
+			<h2>List Greetings</h2>
+			<div>
+				<input id="listGreeting" type="submit" class="btn btn-small"
+					value="Submit">
+			</div>
+		</form>
+		<script>
+        function init() {
+            google.appengine.samples.hello.init('//' + window.location.host + '/_ah/api');
+        }
+    </script>
+		<script src="https://apis.google.com/js/client.js?onload=init"></script>
+	</div>
+</body>
+</html>

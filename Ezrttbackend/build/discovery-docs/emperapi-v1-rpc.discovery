@@ -1,0 +1,371 @@
+{
+ "kind": "discovery#rpcDescription",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/4AXJ9Nv206Z6J9UbP-HRWTmAC3I\"",
+ "discoveryVersion": "v1",
+ "id": "emperapi:v1",
+ "name": "emperapi",
+ "version": "v1",
+ "description": "This is an API",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rpc",
+ "rootUrl": "https://ezrtt.appspot.com/_ah/api/",
+ "rpcUrl": "https://ezrtt.appspot.com/_ah/api/rpc",
+ "rpcPath": "/_ah/api/rpc",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    },
+    "https://www.googleapis.com/auth/userinfo.profile": {
+     "description": "View your basic profile info"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "EmpDayInfo": {
+   "id": "EmpDayInfo",
+   "type": "object",
+   "properties": {
+    "dayOfWeek": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "hourInfo": {
+     "type": "array",
+     "items": {
+      "$ref": "EmpHourInfo"
+     }
+    }
+   }
+  },
+  "EmpHourInfo": {
+   "id": "EmpHourInfo",
+   "type": "object",
+   "properties": {
+    "hourOfDay": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "presences": {
+     "type": "array",
+     "items": {
+      "type": "boolean"
+     }
+    },
+    "samples": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "EmpWeekInfo": {
+   "id": "EmpWeekInfo",
+   "type": "object",
+   "properties": {
+    "dayInfo": {
+     "type": "array",
+     "items": {
+      "$ref": "EmpDayInfo"
+     }
+    },
+    "dayOfwkEnd": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "dayOfwkStart": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "EmpWeekInfoCollection": {
+   "id": "EmpWeekInfoCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "EmpWeekInfo"
+     }
+    }
+   }
+  },
+  "Employee": {
+   "id": "Employee",
+   "type": "object",
+   "properties": {
+    "email": {
+     "type": "string"
+    },
+    "employername": {
+     "type": "string"
+    },
+    "firstName": {
+     "type": "string"
+    },
+    "inTime": {
+     "type": "string"
+    },
+    "lastName": {
+     "type": "string"
+    },
+    "mobile": {
+     "type": "string"
+    },
+    "offAddress": {
+     "$ref": "GeoPt"
+    },
+    "outTime": {
+     "type": "string"
+    },
+    "status": {
+     "type": "boolean"
+    },
+    "weekDayEnd": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "weekDayStart": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "EmployeeCollection": {
+   "id": "EmployeeCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Employee"
+     }
+    }
+   }
+  },
+  "Employer": {
+   "id": "Employer",
+   "type": "object",
+   "properties": {
+    "active": {
+     "type": "boolean"
+    },
+    "address": {
+     "type": "string"
+    },
+    "country": {
+     "type": "string"
+    },
+    "email": {
+     "type": "string"
+    },
+    "headcount": {
+     "type": "string",
+     "format": "int64"
+    },
+    "latlng": {
+     "$ref": "GeoPt"
+    },
+    "name": {
+     "type": "string"
+    },
+    "weekEndDay": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "weekStartDay": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "GeoPt": {
+   "id": "GeoPt",
+   "type": "object",
+   "properties": {
+    "latitude": {
+     "type": "number",
+     "format": "float"
+    },
+    "longitude": {
+     "type": "number",
+     "format": "float"
+    }
+   }
+  },
+  "Status": {
+   "id": "Status",
+   "type": "object",
+   "properties": {
+    "data": {
+     "type": "string"
+    },
+    "emper": {
+     "type": "boolean"
+    },
+    "emper_present": {
+     "type": "boolean"
+    },
+    "updated": {
+     "type": "boolean"
+    }
+   }
+  }
+ },
+ "methods": {
+  "emperapi.addemployee": {
+   "id": "emperapi.addemployee",
+   "parameters": {
+    "resource": {
+     "$ref": "Employee"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Employee"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+   ]
+  },
+  "emperapi.getallemployees": {
+   "id": "emperapi.getallemployees",
+   "allowGet": true,
+   "returns": {
+    "$ref": "EmployeeCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+   ]
+  },
+  "emperapi.getemperdetails": {
+   "id": "emperapi.getemperdetails",
+   "allowGet": true,
+   "returns": {
+    "$ref": "Employer"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+   ]
+  },
+  "emperapi.getloggeduser": {
+   "id": "emperapi.getloggeduser",
+   "allowGet": true,
+   "returns": {
+    "$ref": "Employer"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+   ]
+  },
+  "emperapi.regemper": {
+   "id": "emperapi.regemper",
+   "parameters": {
+    "resource": {
+     "$ref": "Employer"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Status"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+   ]
+  },
+  "emperapi.testapi": {
+   "id": "emperapi.testapi",
+   "allowGet": true,
+   "returns": {
+    "$ref": "Status"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+   ]
+  },
+  "emperapi.viewreport": {
+   "id": "emperapi.viewreport",
+   "parameters": {
+    "date": {
+     "type": "string",
+     "required": true
+    },
+    "emploeenum": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "emploeenum",
+    "date"
+   ],
+   "returns": {
+    "$ref": "EmpWeekInfoCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+   ]
+  }
+ }
+}
