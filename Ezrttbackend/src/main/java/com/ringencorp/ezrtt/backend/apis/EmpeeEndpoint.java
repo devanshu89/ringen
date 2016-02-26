@@ -81,6 +81,8 @@ public class EmpeeEndpoint {
 		
 
 		//wkInfo.setInHour(wkCal.get(Calendar.HOUR_OF_DAY));
+
+		// This is test commit
 		
 		ArrayList<EmpLoc> empLoc = db.getEmpLoc(employeenum, fromdate, todate);
 
