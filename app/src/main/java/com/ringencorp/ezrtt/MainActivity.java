@@ -13,7 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.ringencorp.ezrtt.broadcastrecivers.LocationUpdateReciver;
-import com.ringencorp.ezrtt.database.Locationprovider;
+import com.ringencorp.ezrtt.provider.Locationprovider;
 import com.ringencorp.ezrtt.services.LocationService;
 
 import java.text.DecimalFormat;

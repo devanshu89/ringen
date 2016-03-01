@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.ringencorp.ezrtt.constantclasses.Constant;
 import com.ringencorp.ezrtt.constantclasses.JSONParser;
 import com.ringencorp.ezrtt.constantclasses.Utils;
-import com.ringencorp.ezrtt.database.Locationprovider;
+import com.ringencorp.ezrtt.provider.Locationprovider;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -22,9 +22,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by faraz on 01/02/2016.
- */
 public class LocationUpdateReciver extends BroadcastReceiver {
 
     public static Context cont;

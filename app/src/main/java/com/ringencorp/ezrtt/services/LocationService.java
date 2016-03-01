@@ -25,7 +25,7 @@ import java.util.Locale;
 import static android.os.Build.VERSION_CODES.M;
 
 /**
- * Created by faraz on 27/01/2016.
+ * Created by  on 27/01/2016.
  */
 public class LocationService extends Service {
     public static final String BROADCAST_ACTION = "broad";
