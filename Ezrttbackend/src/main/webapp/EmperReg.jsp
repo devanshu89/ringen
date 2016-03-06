@@ -13,6 +13,9 @@
 <title></title>
 </head>
 <body>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaE355Q3Juas5JwXOoXOfbUbs8wTBkYlo&libraries=places">
+	</script>
 	<div class="row" id="regemper">
 		<div class="col-sm-8 col-sm-offset-2">
 			<form onsubmit="return false;">

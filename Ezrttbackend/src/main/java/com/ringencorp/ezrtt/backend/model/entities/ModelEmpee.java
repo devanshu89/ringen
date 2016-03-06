@@ -1,6 +1,6 @@
 package com.ringencorp.ezrtt.backend.model.entities;
 
-import com.ringencorp.ezrtt.backend.constants.EngineConstants;
+import com.ringencorp.ezrtt.backend.utils.EngineConstants;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

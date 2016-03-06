@@ -14,7 +14,7 @@ ezrtt.appengine.emper = ezrtt.appengine.emper || {};
  * 
  * @type {string}
  */
-ezrtt.appengine.emper.CLIENT_ID = '301735781390-ohah992i62vjbr6shu24g58dppggjb0e.apps.googleusercontent.com'; // change client
+ezrtt.appengine.emper.CLIENT_ID = '119346301347-jegi7nhdfsp1mcrkimav77kdde6hjp2g.apps.googleusercontent.com'; // change client
 
 /**
  * Scopes used by the application.
@@ -191,7 +191,7 @@ ezrtt.appengine.emper.sendempeedata = function() {
 
 ezrtt.appengine.emper.addempee = function() {
 	alert('adding employee');
-	var mylink = 'https://empgaurd.appspot.com/addempee.jsp';
+	var mylink = 'https://ezrttsys.appspot.com/addempee.jsp';
 	if (!window.focus)
 		return true;
 	var href;

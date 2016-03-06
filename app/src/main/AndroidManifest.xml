@@ -29,25 +29,6 @@
 
         </activity>
 
-        <receiver
-            android:name="com.ringencorp.ezrtt.broadcastrecivers.LocationUpdateReciver"
-            android:exported="false"></receiver>
-        <provider
-            android:name="com.ringencorp.ezrtt.database.Locationprovider"
-            android:authorities="com.example.faraz.provider.Location"></provider>
-        <service android:name="com.ringencorp.ezrtt.services.LocationService"></service>
-
-        <receiver android:name="com.ringencorp.ezrtt.broadcastrecivers.SmsReceiver">
-            <intent-filter android:priority="99999">
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-            </intent-filter>
-        </receiver>
-
-
-        <!-- Intent service -->
-        <service
-            android:name="com.ringencorp.ezrtt.services.HttpService"
-            android:exported="false" />
     </application>
 
 </manifest>

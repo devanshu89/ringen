@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/4AXJ9Nv206Z6J9UbP-HRWTmAC3I\"",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/QppBhKnM3PFNU6jH-4f8mHaZ5Cw\"",
  "discoveryVersion": "v1",
  "id": "emperapi:v1",
  "name": "emperapi",
@@ -11,9 +11,9 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rest",
- "baseUrl": "https://ezrtt.appspot.com/_ah/api/",
+ "baseUrl": "https://ezrttsys.appspot.com/_ah/api/",
  "basePath": "/_ah/api/",
- "rootUrl": "https://ezrtt.appspot.com/_ah/api/",
+ "rootUrl": "https://ezrttsys.appspot.com/_ah/api/",
  "servicePath": "",
  "batchPath": "batch",
  "parameters": {
@@ -66,9 +66,6 @@
    "scopes": {
     "https://www.googleapis.com/auth/userinfo.email": {
      "description": "View your email address"
-    },
-    "https://www.googleapis.com/auth/userinfo.profile": {
-     "description": "View your basic profile info"
     }
    }
   }
@@ -277,8 +274,7 @@
     "$ref": "Employee"
    },
    "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email",
-    "https://www.googleapis.com/auth/userinfo.profile"
+    "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
   "getallemployees": {
@@ -289,8 +285,7 @@
     "$ref": "EmployeeCollection"
    },
    "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email",
-    "https://www.googleapis.com/auth/userinfo.profile"
+    "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
   "getemperdetails": {
@@ -301,8 +296,7 @@
     "$ref": "Employer"
    },
    "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email",
-    "https://www.googleapis.com/auth/userinfo.profile"
+    "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
   "getloggeduser": {
@@ -313,8 +307,7 @@
     "$ref": "Employer"
    },
    "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email",
-    "https://www.googleapis.com/auth/userinfo.profile"
+    "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
   "regemper": {
@@ -329,8 +322,7 @@
     "$ref": "Status"
    },
    "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email",
-    "https://www.googleapis.com/auth/userinfo.profile"
+    "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
   "testapi": {
@@ -341,8 +333,7 @@
     "$ref": "Status"
    },
    "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email",
-    "https://www.googleapis.com/auth/userinfo.profile"
+    "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
   "viewreport": {
@@ -369,8 +360,7 @@
     "$ref": "EmpWeekInfoCollection"
    },
    "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email",
-    "https://www.googleapis.com/auth/userinfo.profile"
+    "https://www.googleapis.com/auth/userinfo.email"
    ]
   }
  }

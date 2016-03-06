@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Ezrtt.iml" filepath="$PROJECT_DIR$/Ezrtt.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ezrttbackend/Ezrttbackend.iml" filepath="$PROJECT_DIR$/Ezrttbackend/Ezrttbackend.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ringen.iml" filepath="$PROJECT_DIR$/ringen.iml" />
     </modules>
   </component>
 </project>

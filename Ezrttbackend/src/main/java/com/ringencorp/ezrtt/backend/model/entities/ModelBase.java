@@ -15,7 +15,7 @@ import javax.jdo.annotations.PrimaryKey;
 public class ModelBase {
 
 	@PrimaryKey
-	private String mID;
+	private String mID ;
 
 	public ModelBase(String id) {
 		this.mID = id;

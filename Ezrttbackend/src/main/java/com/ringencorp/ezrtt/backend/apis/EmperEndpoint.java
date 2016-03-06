@@ -7,7 +7,6 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
 import com.google.appengine.api.oauth.OAuthRequestException;
-import com.google.appengine.api.urlfetch.HTTPMethod;
 import com.google.appengine.api.users.User;
 import com.ringencorp.ezrtt.backend.db.DatabaseWrapper;
 import com.ringencorp.ezrtt.backend.helpers.DatastoreHelper;
@@ -17,7 +16,7 @@ import com.ringencorp.ezrtt.backend.model.Employer;
 import com.ringencorp.ezrtt.backend.model.Status;
 import com.ringencorp.ezrtt.backend.model.entities.ModelEmpee;
 import com.ringencorp.ezrtt.backend.model.entities.ModelEmper;
-import com.ringencorp.ezrtt.backend.utils.Constants;
+import com.ringencorp.ezrtt.backend.utils.EngineConstants;
 
 import java.util.ArrayList;
 
@@ -26,9 +25,9 @@ import java.util.ArrayList;
  *
  */
 
-@Api(name = "emperapi", version = "v1", scopes = { Constants.EMAIL_SCOPE, Constants.PROFILE_SCOPE }, clientIds = {
-		Constants.WEB_CLIENT_ID, Constants.ANDROID_CLIENT_ID, Constants.IOS_CLIENT_ID,
-		Constants.APIEXP_CLIENT_ID }, audiences = { Constants.ANDROID_AUDIENCE })
+@Api(name = "emperapi", version = "v1", scopes = { EngineConstants.EMAIL_SCOPE }, clientIds = {
+		EngineConstants.WEB_CLIENT_ID, EngineConstants.ANDROID_CLIENT_ID, EngineConstants.IOS_CLIENT_ID,
+		EngineConstants.API_EXPLORER_CLIENT_ID }, audiences = { EngineConstants.ANDROID_AUDIENCE })
 public class EmperEndpoint {
 
 	DatastoreHelper mDSHelper;
@@ -56,6 +55,10 @@ public class EmperEndpoint {
 	public Employee addEmployee(Employee empee, User emper) throws OAuthRequestException {
 		if (emper == null) {
 			throw new OAuthRequestException("User not logged in");
+		}
+
+		if (EngineConstants.TEST_RUN) {
+
 		}
 
 		ModelEmpee modEmpee = new ModelEmpee(empee.getMobile(), emper.getEmail(), empee.getFirstName(),

@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.ringencorp.ezrtt.constantclasses.Constant;
 import com.ringencorp.ezrtt.constantclasses.JSONParser;
 import com.ringencorp.ezrtt.constantclasses.Utils;
-import com.ringencorp.ezrtt.database.Locationprovider;
+
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -56,16 +56,16 @@ public class LocationUpdateReciver extends BroadcastReceiver {
             while (c.moveToNext()) {
                 jobj = new JSONObject();
 
-                try {
-                    jobj.put("userid", c.getString(c.getColumnIndex(Locationprovider.KEY_userid)));
-                    jobj.put("user_latitute", c.getString(c.getColumnIndex(Locationprovider.KEY_Latitute)));
-                    jobj.put("user_longtitute", c.getString(c.getColumnIndex(Locationprovider.KEY_Longtute)));
-                    jobj.put("user_address", c.getString(c.getColumnIndex(Locationprovider.KEY_Adress)));
-                    jobj.put("user_timestamp", c.getString(c.getColumnIndex(Locationprovider.KEY_timestamp)));
-                    jobj.put("user_mobie", Constant.USER_MOBILE);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    jobj.put("userid", c.getString(c.getColumnIndex(Locationprovider.KEY_userid)));
+//                    jobj.put("user_latitute", c.getString(c.getColumnIndex(Locationprovider.KEY_Latitute)));
+//                    jobj.put("user_longtitute", c.getString(c.getColumnIndex(Locationprovider.KEY_Longtute)));
+//                    jobj.put("user_address", c.getString(c.getColumnIndex(Locationprovider.KEY_Adress)));
+//                    jobj.put("user_timestamp", c.getString(c.getColumnIndex(Locationprovider.KEY_timestamp)));
+//                    jobj.put("user_mobie", Constant.USER_MOBILE);
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
 
                 arr.put(jobj);
             }

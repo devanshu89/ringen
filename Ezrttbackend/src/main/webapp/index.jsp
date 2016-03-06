@@ -34,7 +34,7 @@
 
 <script>
 	function init() {
-		google.appengine.samples.hello.init('//' + window.location.host
+		ezrtt.appengine.emper.init('//' + window.location.host
 				+ '/_ah/api');
 	}
 </script>
@@ -44,7 +44,7 @@
 
 </script>
 <meta name="google-signin-client_id"
-	content="301735781390-ohah992i62vjbr6shu24g58dppggjb0e.apps.googleusercontent.com">
+	content="119346301347-jegi7nhdfsp1mcrkimav77kdde6hjp2g.apps.googleusercontent.com">
 </meta>
 
 </head>
@@ -73,7 +73,7 @@
 							<div>
 								<p id="loggeduser">Hello!</p>
 								<a id="signinButton" href="javascript:void(0);" class="btn"
-									onclick="google.appengine.samples.hello.auth()">Sign in</a>
+									onclick="ezrtt.appengine.emper.auth()">Sign in</a>
 
 							</div>
 						</li>

@@ -8,7 +8,7 @@ import java.util.Calendar;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import com.google.appengine.api.datastore.GeoPt;
-import com.ringencorp.ezrtt.backend.constants.EngineConstants;
+import com.ringencorp.ezrtt.backend.utils.EngineConstants;
 
 /**
  * @author Devanshu
