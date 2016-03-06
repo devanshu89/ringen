@@ -33,9 +33,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by faraz on 08/02/2016.
- */
 public class VerificationScreen extends AppCompatActivity implements View.OnClickListener {
 
     private static String TAG = VerificationScreen.class.getSimpleName();

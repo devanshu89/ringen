@@ -10,9 +10,6 @@ import android.util.Log;
 import com.ringencorp.ezrtt.constantclasses.Constant;
 import com.ringencorp.ezrtt.services.HttpService;
 
-/**
- * Created by faraz on 10/02/2016.
- */
 public class SmsReceiver extends BroadcastReceiver {
     private static final String TAG = SmsReceiver.class.getSimpleName();
 

@@ -5,9 +5,6 @@ import android.content.SharedPreferences;
 
 import java.util.HashMap;
 
-/**
- * Created by faraz on 08/02/2016.
- */
 public class PrefManager {
     // Shared preferences file name
     private static final String PREF_NAME = "LOCATION";

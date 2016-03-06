@@ -19,9 +19,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by faraz on 10/02/2016.
- */
+
 public class HttpService extends IntentService {
 
     private static String TAG = HttpService.class.getSimpleName();

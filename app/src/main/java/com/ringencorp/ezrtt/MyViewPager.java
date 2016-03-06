@@ -5,9 +5,6 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-/**
- * Created by faraz on 10/02/2016.
- */
 public class MyViewPager extends ViewPager {
 
     public MyViewPager(Context context) {
