@@ -264,7 +264,7 @@ ezrtt.appengine.emper.displayempee = function() {
 };
 
 ezrtt.appengine.emper.displayRegEmper = function() {
-	$("#board").load('EmperReg.jsp #regemper');
+	$("#board").load('EmperReg.html #regemper', ezrtt.appengine.emper.loadmaps());
 };
 
 ezrtt.appengine.emper.addemper = function() {
@@ -279,7 +279,7 @@ ezrtt.appengine.emper.addemper = function() {
 	var longitude = 87.65;
 
 	if (name == null || address == null || headcount == null || country == null) {
-		alert("Missing details. please fill out details completeley");
+		alert("Missing details. please fill out details completely");
 		return false;
 	}
 
@@ -300,3 +300,19 @@ ezrtt.appengine.emper.addemper = function() {
 	});
 
 };
+
+ezrtt.appengine.emper.initialize = function () {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("mappedads"),mapProp);
+}
+
+ezrtt.appengine.emper.loadmaps = function () {
+	alert("loading maps");
+	var script = document.createElement("script");
+    script.src = "http://maps.googleapis.com/maps/api/js?callback=initialize";
+    document.getElementById("board").appendChild(script);
+}
